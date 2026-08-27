@@ -1,4 +1,7 @@
 ﻿using advancd__.GenericClass;
+using advancd__.GenericConstraint.Constractor;
+using advancd__.GenericConstraint.primary.general;
+using advancd__.GenericConstraint.primary.special;
 using advancd__.GenericInterfaces;
 using advancd__.GenericMethods;
 using advancd__.GenericsMultipleType;
@@ -39,28 +42,47 @@ namespace advancd__
             #endregion
 
             #region Generic interfaces
-            ProductRepository product = new();
-            Proudct product01 = new Proudct(100, "Laptop", 1);
-            Proudct product02 = new Proudct(200, "Tv", 2);
-            product.Add(product01);
-            product.Add(product02);
+            //ProductRepository product = new();
+            //Proudct product01 = new Proudct(100, "Laptop", 1);
+            //Proudct product02 = new Proudct(200, "Tv", 2);
+            //product.Add(product01);
+            //product.Add(product02);
 
-            List<Proudct> products = product.GetAllOfProudct();
+            //List<Proudct> products = product.GetAllOfProudct();
 
-            Console.WriteLine(string.Join("\n", products));
+            //Console.WriteLine(string.Join("\n", products));
 
-            Console.WriteLine("=============================================");
+            //Console.WriteLine("=============================================");
 
 
-            var productByid = product.GetById(2);
+            //var productByid = product.GetById(2);
             
-            Console.WriteLine(productByid!.ToString());
+            //Console.WriteLine(productByid!.ToString());
 
-            Console.WriteLine("=============================================");
+            //Console.WriteLine("=============================================");
 
-            product.Remove(product01);
+            //product.Remove(product01);
 
-            Console.WriteLine(string.Join(", ", products));
+            //Console.WriteLine(string.Join(", ", products));
+            #endregion
+
+            #region Generic Constraint
+            //// Clac<string> calc = new("5", "10");
+            //// Clac<int> calc02 = new(5, 10); '// Here will be an error because int is Struct not class, and the generic constraint specifies that T must be a class (reference type).
+
+            ////Cat myCat = new Cat { CountOfLegs = 4, CountOfEyes = 2 };
+            ////Dog myDog = new Dog {};
+
+            ////AnimalShelter<Ainmal> shelter = new AnimalShelter<Ainmal>();
+
+            ////shelter.AddAnimal(myCat);
+            //////shelter.AddAnimal(myDog); // Here will be an error because Dog class does not inherit from Ainmal class, and the generic constraint specifies that T must be a inherit of Ainmal.
+            ////shelter.DisplayAnimals();
+
+            //Factor factor = new Factor();
+            //factor.Create<int>();
+            ////factor.Create<Cat>(); // Here will be an error because Cat class does not have a parameterless constructor Cause this Class We Can able it if we go and add Parameterless constructor to Cat class
+
             #endregion
 
         }
