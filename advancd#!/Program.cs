@@ -1,4 +1,5 @@
 ﻿using advancd__.GenericClass;
+using advancd__.GenericInterfaces;
 using advancd__.GenericMethods;
 using advancd__.GenericsMultipleType;
 
@@ -35,6 +36,31 @@ namespace advancd__
             //var value = Utilities.GetGetterNumber(array);
             //Console.WriteLine($"value: {value}");
 
+            #endregion
+
+            #region Generic interfaces
+            ProductRepository product = new();
+            Proudct product01 = new Proudct(100, "Laptop", 1);
+            Proudct product02 = new Proudct(200, "Tv", 2);
+            product.Add(product01);
+            product.Add(product02);
+
+            List<Proudct> products = product.GetAllOfProudct();
+
+            Console.WriteLine(string.Join("\n", products));
+
+            Console.WriteLine("=============================================");
+
+
+            var productByid = product.GetById(2);
+            
+            Console.WriteLine(productByid!.ToString());
+
+            Console.WriteLine("=============================================");
+
+            product.Remove(product01);
+
+            Console.WriteLine(string.Join(", ", products));
             #endregion
 
         }
