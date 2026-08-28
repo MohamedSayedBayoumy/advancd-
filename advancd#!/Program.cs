@@ -5,6 +5,7 @@ using advancd__.GenericConstraint.primary.special;
 using advancd__.GenericInterfaces;
 using advancd__.GenericMethods;
 using advancd__.GenericsMultipleType;
+using advancd__.StatisWithGeneric;
 
 namespace advancd__
 {
@@ -56,7 +57,7 @@ namespace advancd__
 
 
             //var productByid = product.GetById(2);
-            
+
             //Console.WriteLine(productByid!.ToString());
 
             //Console.WriteLine("=============================================");
@@ -82,6 +83,46 @@ namespace advancd__
             //Factor factor = new Factor();
             //factor.Create<int>();
             ////factor.Create<Cat>(); // Here will be an error because Cat class does not have a parameterless constructor Cause this Class We Can able it if we go and add Parameterless constructor to Cat class
+
+            #endregion
+
+            #region Static With Generic
+            //StaticClass.IncrementCount();
+            //StaticClass.IncrementCount();
+            //StaticClass.IncrementCount();
+
+            //Console.WriteLine($"Count: {StaticClass.Count}");
+
+            //StaticClass.IncrementCount();
+            //StaticClass.IncrementCount();
+            //StaticClass.IncrementCount();
+
+            //Console.WriteLine($"After Edit: {StaticClass.Count}");
+
+            StaticWithGeneric<int>.IncrementCount();
+            StaticWithGeneric<int>.IncrementCount();
+            StaticWithGeneric<int>.IncrementCount();
+            
+            Console.WriteLine($"Count Of Int: {StaticWithGeneric<int>.Count}");
+
+            StaticWithGeneric<String>.IncrementCount();
+            StaticWithGeneric<String>.IncrementCount();
+            StaticWithGeneric<String>.IncrementCount();
+            StaticWithGeneric<String>.IncrementCount();
+
+            Console.WriteLine($"Count Of String: {StaticWithGeneric<String>.Count}");
+
+            GenericClass<int> genericClass01 = new();
+            genericClass01.IncrementCount();
+            genericClass01.IncrementCount();
+            genericClass01.IncrementCount();
+
+            Console.WriteLine($"Count Of Int With Out Static Keyword: {genericClass01.Count}");
+
+            GenericClass<String> genericClass02 = new();
+            genericClass02.IncrementCount();
+
+            Console.WriteLine($"Count Of String With Out Static Keyword: {genericClass02.Count}");
 
             #endregion
 
